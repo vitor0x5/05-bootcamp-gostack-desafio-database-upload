@@ -12,7 +12,7 @@ import {
 import Category from './Category';
 
 @Entity('transactions')
-class Transaction {
+export default class Transaction {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -30,7 +30,7 @@ class Transaction {
 
   @ManyToOne(() => Category)
   @JoinColumn({ name: 'category_id' })
-  provider: Category;
+  category: Category;
 
   @CreateDateColumn()
   created_at: Date;

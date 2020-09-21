@@ -3,8 +3,9 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn,
+  UpdateDateColumn
 } from 'typeorm';
+
 @Entity('categories')
 class Category {
   @PrimaryGeneratedColumn('uuid')
